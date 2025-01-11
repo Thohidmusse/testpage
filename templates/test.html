@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background: rgba(240, 240, 240, 1);
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    
+    
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aptitude Test</h1>
+        <form action="/test" method="POST">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. What is 10 + 5?</p>
+                <div class="options">
+                    <label><input type="radio" name="question1" value="10" required> 10</label><br>
+                    <label><input type="radio" name="question1" value="15"> 15</label><br>
+                    <label><input type="radio" name="question1" value="20"> 20</label><br>
+                    <label><input type="radio" name="question1" value="25"> 25</label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. Which is the largest planet in our Solar System?</p>
+                <div class="options">
+                    <label><input type="radio" name="question2" value="Earth" required> Earth</label><br>
+                    <label><input type="radio" name="question2" value="Mars"> Mars</label><br>
+                    <label><input type="radio" name="question2" value="Jupiter"> Jupiter</label><br>
+                    <label><input type="radio" name="question2" value="Venus"> Venus</label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. What is the square root of 81?</p>
+                <div class="options">
+                    <label><input type="radio" name="question3" value="7" required> 7</label><br>
+                    <label><input type="radio" name="question3" value="8"> 8</label><br>
+                    <label><input type="radio" name="question3" value="9"> 9</label><br>
+                    <label><input type="radio" name="question3" value="10"> 10</label>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. What is the capital of France?</p>
+                <div class="options">
+                    <label><input type="radio" name="question4" value="Berlin" required> Berlin</label><br>
+                    <label><input type="radio" name="question4" value="Madrid"> Madrid</label><br>
+                    <label><input type="radio" name="question4" value="Paris"> Paris</label><br>
+                    <label><input type="radio" name="question4" value="Rome"> Rome</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+       
+    </div>
+</body>
+</html>

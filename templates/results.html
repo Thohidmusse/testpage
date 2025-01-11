@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background: rgba(240, 240, 240, 1);
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container h1 {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .details {
+            text-align: left;
+        }
+        .details ul {
+            padding-left: 20px;
+        }
+        .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .btn.secondary {
+        background-color: #6c757d;
+    }
+
+    .btn.secondary:hover {
+        background-color: #5a6268;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Results</h1>
+        <p class="result">You scored: {{ results['score'] }}/{{ results['total_questions'] }}</p>
+        <div class="details">
+            <h3>Your Answers:</h3>
+            <ul>
+                {% for question, answer in results['selected_answers'].items() %}
+                    <li><strong>{{ question }}</strong>: {{ answer }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="{{ url_for('home') }}" class="btn" style="margin-top: 10px; background-color: #6c757d;">Back</a>
+    </div>
+</body>
+</html>
